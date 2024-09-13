@@ -1,0 +1,159 @@
+    <h1>Antes de começarmos, é bom relembrar!</h1>
+<div class="variaveis">
+    <h2>Tipos Primitivos</h2>
+    <p>Esses são os tipos básicos que vêm diretamente da linguagem.</p>
+    <ul>
+        <li><code>string</code>: Representa texto. <br>Exemplo: <code>let nome = 'Carlos';</code></li><br>
+        <li><code>number</code>: Representa números, tanto inteiros quanto decimais. <br>Exemplo: <code>let idade = 30;</code></li><br>
+        <li><code>boolean</code>: Representa valores booleanos (verdadeiro ou falso). <br>Exemplo: <code>let ativo = true;</code></li><br>
+        <li><code>null</code>: Representa a ausência intencional de valor. <br>Exemplo: <code>let valorNulo = null;</code></li><br>
+        <li><code>undefined</code>: Representa uma variável que foi declarada, mas ainda não foi atribuída. <br>Exemplo: <code>let indefinido = undefined;</code></li><br>
+        <li><code>symbol</code>: Representa valores únicos e imutáveis (geralmente usados como identificadores). <br>Exemplo: <code>let id = Symbol('id');</code></li><br>
+        <li><code>bigint</code>: Representa números inteiros muito grandes. <br>Exemplo: <code>let grandeNumero = 9007199254740991n;</code></li><br>
+    </ul>
+    <br>
+    <h2>Tipos Complexos</h2>
+    <ul>
+        <li><code>array</code>: Lista de valores do mesmo tipo. <br>Exemplo: <code>let listaDeNumeros = [1, 2, 3];</code></li><br>
+        <li><code>tuple</code>: Um array com um número fixo de elementos de tipos pré-determinados. <br>Exemplo: <code>let tupla = ['Carlos', 30];</code></li><br>
+        <li><code>object</code>: Conjunto de pares de chave-valor. <br>Exemplo: <code>let pessoa = { nome: 'Carlos', idade: 30 };</code></li><br>
+        <li><code>enum</code>: Representa um conjunto de valores nomeados. <br>Exemplo: <code>enum Cor { Vermelho, Verde, Azul }</code></li><br>
+    </ul>
+    <br>
+    <h2>Tipos Especiais</h2>
+    <ul>
+        <li><code>any</code>: Pode ser qualquer tipo (usado quando o tipo não é conhecido ou pode variar). <br>Exemplo: <code>let valor = 'teste'; valor = 10;</code></li><br>
+        <li><code>unknown</code>: Tipo que também pode receber qualquer valor, mas requer verificação de tipo antes do uso. <br>Exemplo: <code>let valorDesconhecido = 10; if (typeof valorDesconhecido === 'number') { console.log(valorDesconhecido + 1); }</code></li><br>
+        <li><code>void</code>: Representa a ausência de retorno em funções. <br>Exemplo: <code>function saudacao(): void { console.log('Olá!'); }</code></li><br>
+        <li><code>never</code>: Representa um valor que nunca ocorrerá, usado para funções que nunca retornam (como exceções ou loops infinitos). <br>Exemplo: <code>function erro(): never { throw new Error('Algo deu errado'); }</code></li><br>
+        <li><code>literal</code>: Um tipo que é o valor literal exato, pode ser string, número ou booleano. <br>Exemplo: <code>let estado: 'ativo' | 'inativo' = 'ativo';</code></li><br>
+        <li><code>union types</code>: Combinação de dois ou mais tipos. <br>Exemplo: <code>let resultado: string | number; resultado = 'sucesso'; resultado = 200;</code></li><br>
+        <li><code>intersection types</code>: Combinação de vários tipos em um único. <br>Exemplo: <code>interface Pessoa { nome: string; } interface Funcionario { empresa: string; } let trabalhador: Pessoa & Funcionario = { nome: 'Carlos', empresa: 'TechCorp' };</code></li><br>
+        <li><code>type alias</code>: Uma forma de dar nome a tipos complexos. <br>Exemplo: <code>type Ponto = { x: number, y: number }; let coordenada: Ponto = { x: 10, y: 20 };</code></li><br>
+    </ul>
+    <br>
+</div>
+
+<div class="operadores">
+    <h2>Operadores</h2>
+    <p>Operadores são símbolos que permitem manipular valores.</p>
+    <h3>Operadores aritméticos</h3>
+    <p>Realizam operações matemáticas básicas.</p>
+    <ul>
+        <li><code>+</code>: Soma <br>Exemplo: <code>let soma = 5 + 3;</code></li><br>
+        <li><code>*</code>: Multiplicação <br>Exemplo: <code>let produto = 5 * 3;</code></li><br>
+    </ul>
+    <br>
+    <h3>Operadores de comparação</h3>
+    <p>Comparar dois valores e retornar true ou false.</p>
+    <ul>
+        <li><code>&gt;</code>: Maior <br>Exemplo: <code>let maior = 5 &gt; 3;</code></li><br>
+        <li><code>==</code>: Igual <br>Exemplo: <code>let igual = 5 == 3;</code></li><br>
+    </ul>
+    <br>
+    <h3>Operadores lógicos</h3>
+    <p>Combinar condições.</p>
+    <ul>
+        <li><code>&amp;&amp;</code>: E lógico <br>Exemplo: <code>let resultado = (5 &gt; 3) &amp;&amp; (3 &lt; 1);</code></li><br>
+        <li><code>||</code>: Ou lógico <br>Exemplo: <code>let resultado2 = (5 &gt; 3) || (3 &lt; 1);</code></li><br>
+    </ul>
+    <br>
+</div>
+    <h2>Funções</h2>
+    <p>Funções são blocos de código que realizam uma tarefa específica e podem ser reutilizadas. Elas recebem entradas (parâmetros) e retornam um valor.</p>
+    <pre><code>function saudacao(nome: string): string {
+    return `Olá, ${nome}!`;
+}
+
+console.log(saudacao("João"));</code></pre>
+<br>
+    <h2>Estruturas de Dados</h2>
+    <p>As estruturas de dados são formas de organizar e armazenar dados.</p>
+    <h3>Arrays</h3>
+    <p>Uma lista de itens.</p>
+    <pre><code>let numeros: number[] = [1, 2, 3, 4];
+console.log(numeros[0]);</code></pre>
+<br>
+    <h3>Objetos</h3>
+    <p>Estruturas que armazenam dados em pares de chave-valor.</p>
+    <pre><code>let pessoa = { nome: "Maria", idade: 25 };
+console.log(pessoa.nome);</code></pre>
+<p>Outras estruturas avançadas incluem listas, filas e pilhas, mas arrays e objetos são os mais comuns para iniciantes.</p>
+<br>
+
+    <h2>Escopo de Variáveis</h2>
+    <p>O escopo define onde uma variável pode ser acessada.</p>
+    <h3>Escopo local</h3>
+    <p>A variável só pode ser acessada dentro de uma função ou bloco de código.</p>
+    <pre><code>function mostrarIdade() {
+    let idade = 30;
+    console.log(idade);
+}</code></pre>
+<br>
+    <h3>Escopo global</h3>
+    <p>A variável pode ser acessada de qualquer lugar no código.</p>
+    <pre><code>let idadeGlobal = 25;
+function mostrarGlobal() {
+    console.log(idadeGlobal);
+}</code></pre>
+<p>Manter o escopo controlado ajuda a evitar conflitos de nomes de variáveis.</p>
+<br>
+
+    <h2>Tratamento de Erros</h2>
+    <p>O tratamento de erros garante que o programa lide com situações inesperadas sem quebrar.</p>
+    <p>Exemplo com try-catch:</p>
+    <pre><code>try {
+    let resultado = 10 / 0;  // Pode gerar um erro
+} catch (erro) {
+    console.log("Ocorreu um erro: " + erro);
+}</code></pre>
+<p>Neste exemplo, o bloco catch captura e trata erros que possam ocorrer no bloco try, garantindo que o programa não pare de funcionar.</p>
+<br>
+
+    <h2>Entrada e Saída de Dados (I/O)</h2>
+    <p>Entrada e saída de dados (I/O) permitem que o programa interaja com o usuário ou outras fontes de dados.</p>
+    <h3>Entrada</h3>
+    <p>Receber dados de uma fonte (usuário, API).</p>
+    <h3>Saída</h3>
+    <p>Exibir dados (console, tela).</p>
+    <pre><code>console.log("Qual é o seu nome?");
+let nome = "Carlos";  // Simulando entrada
+console.log(`Olá, ${nome}`);</code></pre>
+<p>Em sistemas mais complexos, o input pode vir de formulários web e o output pode ser o retorno de dados em uma API.</p>
+<br>
+
+    <h2>Estruturas de Repetição Avançadas</h2>
+    <p>Além das iterações simples, como o loop for, existe a recursão, onde uma função chama a si mesma.</p>
+    <p>Exemplo de recursão:</p>
+    <pre><code>function fatorial(n: number): number {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * fatorial(n - 1);
+}
+
+console.log(fatorial(5));</code></pre>
+<p>A recursão é útil para problemas onde o resultado é obtido por meio da repetição de uma operação sobre valores cada vez menores.</p>
+<br>
+
+    <h2>Comentários e Organização do Código</h2>
+    <p>Comentários são anotações no código que ajudam a explicar o que ele faz, sem interferir na execução.</p>
+    <p>Exemplo:</p>
+    <pre><code>// Esta função retorna a soma de dois números
+function soma(a: number, b: number): number {
+    return a + b;
+}</code></pre>
+<p>Adicionar comentários ajuda a manter o código legível e facilita a colaboração entre desenvolvedores. Mas isso depende da cultura da empresa e do time que você estiver trabalhando, para alguns um código bem escrito ou documentado não precisa de comentários.</p>
+<br>
+
+    <h2>Programação Assíncrona</h2>
+    <p>A programação assíncrona é essencial para lidar com operações que levam tempo, como chamadas a APIs ou acesso a bancos de dados, sem bloquear o restante do código.</p>
+    <p>Exemplo com async/await:</p>
+    <pre><code>async function buscarDados() {
+    const dados = await fetch('https://api.example.com/dados');
+    return dados.json();
+}
+
+buscarDados().then(result => console.log(result));</code></pre>
+<p>Aqui, o código continua rodando enquanto aguarda a resposta da API. Isso é crucial para aplicações que precisam ser rápidas e responsivas.</p>
+<br>

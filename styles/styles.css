@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.sidebar a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.content {
+    padding: 20px;
+    flex: 1;
+    margin-left: 270px;
+}
+
+pre {
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    padding: 15px;
+    border-radius: 5px;
+    overflow: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+code {
+    background-color: transparent;
+    color: #dcdcdc;
+}
+
+.variaveis code,
+.operadores code {
+    color: #000000;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #6a9955;
+}
+
+.token.punctuation {
+    color: #d4d4d4;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #569cd6;
+}
+
+.token.boolean,
+.token.number {
+    color: #b5cea8;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #ce9178;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #dcdcaa;
+}
+
+.token.atrule,
+.token.keyword {
+    color: #c586c0;
+}
+
+.token.function {
+    color: #dcdcaa;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #d16969;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #0056b3;
+    margin-top: 40px;
+}
+
+h3 {
+    color: #333;
+    margin-top: 30px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+ul,
+ol {
+    margin: 10px 0 20px 20px;
+}
+
+ul li,
+ol li {
+    margin: 5px 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+blockquote {
+    background-color: #e9ecef;
+    border-left: 5px solid #007bff;
+    padding: 10px 20px;
+    margin: 20px 0;
+}
+
+.focus {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.tools-list {
+    background-color: #e9ecef;
+    border-left: 5px solid #007bff;
+    padding: 10px 20px;
+    margin: 20px 0;
+}
+.fundoblack code{
+    background-color: #000000;
+}

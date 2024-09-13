@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao Backend e Estrutura de um Projeto</title>
+
+</head>
+<body>
+    <h1>Introdução ao Backend e Estrutura de um Projeto</h1>
+
+    <h2>O que é backend: Diferenças entre frontend e backend</h2>
+    <p>Backend refere-se à parte "invisível" de uma aplicação, onde são processados os dados, regras de negócios e acessos a bancos de dados. Ao contrário do frontend, que é a interface com a qual o usuário interage, o backend lida com a lógica por trás dessa interação, como autenticação, processamento de pagamentos e manipulação de dados.</p>
+    
+    <p>Diferenças principais:</p>
+    <ul>
+        <li><strong>Frontend:</strong> Responsável pela interface do usuário (UI) e pela experiência do usuário (UX).</li>
+        <li><strong>Backend:</strong> Responsável por lógica de negócios, manipulação de dados e resposta a requisições do frontend.</li>
+    </ul>
+
+    <div style="display: flex; justify-content: center;">
+        <img src="/imgs/backend-front-img.png" alt="Frontend vs. Backend" style="max-width: 100%;">
+    </div>
+
+    <h2>Estrutura de um servidor: O que é um servidor web, como ele recebe e responde a requisições</h2>
+    <p>Um servidor web é um software que aceita requisições HTTP de clientes (navegadores, apps) e responde a elas com dados, normalmente em formato HTML, JSON ou XML.</p>
+    
+    <p>Ele trabalha em um modelo request-response, onde:</p>
+    <ol>
+        <li>O cliente (como um navegador) faz uma requisição (GET, POST, etc.).</li>
+        <li>O servidor processa essa requisição, muitas vezes consultando bancos de dados, e retorna uma resposta com dados ou uma página web.</li>
+    </ol>
+    <p>Servidores web populares incluem Apache, Nginx, e no caso do NestJS, o servidor embutido utiliza Express ou Fastify.</p>
+
+    <h2>REST vs. GraphQL: Diferentes arquiteturas para APIs</h2>
+    <p><strong>REST</strong> (Representational State Transfer) é uma arquitetura amplamente usada para criar APIs que seguem um padrão de métodos HTTP (GET, POST, PUT, DELETE) para operar sobre recursos.</p>
+    
+    <p>Cada endpoint na API REST representa um recurso, como <code>/users</code>, <code>/products</code>.</p>
+    
+    <p>É simples e escalável, mas pode resultar em over-fetching ou under-fetching de dados.</p>
+
+    <p><strong>GraphQL</strong> é uma alternativa ao REST, onde o cliente pode especificar exatamente quais dados precisa em uma única requisição.</p>
+    
+    <p>Oferece mais flexibilidade ao evitar múltiplas chamadas à API, permitindo que o cliente solicite exatamente o que precisa em uma consulta.</p>
+
+    <h2>Introdução ao NestJS: O que é e por que usar</h2>
+    <p>NestJS é um framework para desenvolvimento de aplicações Node.js que usa uma arquitetura modular e organizada, inspirada em práticas de desenvolvimento do Angular. Ele facilita a criação de APIs escaláveis e testáveis.</p>
+    
+    <p><strong>Por que usar NestJS:</strong></p>
+    <ul>
+        <li>Arquitetura modular: Facilita a separação de responsabilidades.</li>
+        <li>Injeção de dependência: Oferece uma forma robusta de gerenciar dependências entre classes.</li>
+        <li>Compatibilidade com outros pacotes: Usa o poder do ecossistema Node.js, integrando-se bem com ferramentas populares como Express, TypeORM, Mongoose, etc.</li>
+        <li>Estrutura consistente: Oferece uma estrutura pré-definida que ajuda a organizar o código.</li>
+    </ul>
+
+    <h2>Instalação e configuração do NestJS: Criando o primeiro projeto</h2>
+    <ol class="fundoblack">
+        <li>Primeiro instale o controlador de versão do Node: <a href="https://github.com/coreybutler/nvm-windows" target="_blank">coreybutler/nvm-windows</a>.</li>
+        <li>Depois de instalado, vá no PowerShell e digite: <code>nvm --version</code> para validar se foi instalado corretamente.</li>
+        <li>No terminal, digite <code>nvm install lts</code> para instalar a última versão estável do Node.</li>
+        <li>Com <code>nvm list</code> você verá a lista de versões disponíveis, e com <code>nvm use</code> escolha a versão que foi baixada.</li>
+        <li>Com o Node instalado na versão LTS, siga os passos de instalação do NestJS: <a href="https://docs.nestjs.com/first-steps" target="_blank">First steps | NestJS - A progressive Node.js framework</a>.</li>
+    </ol>
+
+    <h2>Desafio</h2>
+    <blockquote>
+        Siga os passos de instalação e execute o serviço (apenas o que estiver pré-instalado, sem criação de códigos neste momento).
+        Navegue pelos arquivos e familiarize-se com a estrutura e nomenclatura.
+    </blockquote>
+    
+    <p>A ideia inicial do desafio é estimular a obtenção de informações estruturadas. Literalmente seguir os passos e desenvolver a zona de aprendizagem proximal.</p>
+    
+    <p>Pesquise e aprofunde-se sempre que encontrar algo que não entende completamente.</p>
+
+    REST APIs:
+
+    <h2>Sugestões de Leitura</h2>
+    <h3>RESTful Web Services</h3>
+    <ul>
+        <li><a href="https://restfulapi.net/" target="_blank">RESTful Web Services: Principles and Best Practices</a></li>
+        <li><a href="https://restfulapi.net/http-methods/" target="_blank">Understanding REST: Verbs, error codes, and authentication</a></li>
+    </ul>
+    <h3>NestJS</h3>
+    <ul>
+        <li><a href="https://docs.nestjs.com/" target="_blank">NestJS Official Documentation</a></li>
+        <li><a href="https://kamilmysliwiec.com/nestjs-a-progressive-node-js-framework/" target="_blank">NestJS: A progressive Node.js framework</a></li>
+    </ul>
+    <h3>Node.js</h3>
+    <ul>
+        <li><a href="https://nodejs.org/en/docs/" target="_blank">Node.js Official Documentation</a></li>
+        <li><a href="https://www.nodebeginner.org/" target="_blank">The Node Beginner Book</a></li>
+    </ul>
+    <p>Essas leituras fornecerão uma base sólida e ajudarão a entender melhor os conceitos apresentados na aula 1.</p>
+</body>
+</html>
